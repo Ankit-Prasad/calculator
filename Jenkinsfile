@@ -1,7 +1,9 @@
 node {
 
   def app
-
+    stage('Clone Repository'){
+       checkout scm
+    }
     stage('Clean') {
         sh 'mvn clean'
     }
